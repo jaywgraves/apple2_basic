@@ -1,0 +1,12 @@
+ 10  HOME 
+ 20  FOR X = 1 TO 10
+ 30  VTAB 6: PRINT "               |||||||||"
+ 35 S =  PEEK ( - 16336)
+ 40  VTAB 6: PRINT "               /////////"
+ 45 S =  PEEK ( - 16336)
+ 50  VTAB 6: PRINT "               \\\\\\\\\"
+ 55 S =  PEEK ( - 16336)
+ 60  NEXT 
+ 70  VTAB 6: PRINT "               SPINDIZZY"
+ 80  PRINT : PRINT : PRINT 
+ 90  PRINT 

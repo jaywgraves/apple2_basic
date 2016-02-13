@@ -1,0 +1,27 @@
+ 10  REM  *** TWO DIM NAME ARRAY
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 2/5/86
+ 40  DIM N$(6),A(6,3)
+ 50  HOME 
+ 60  VTAB (5): PRINT "This program will let you input 6"
+ 70  PRINT "names and two grades for each name."
+ 80  PRINT "Then it will average the grades and"
+ 90  PRINT "print them in a table."
+ 100  VTAB (21): PRINT "PRESS ANY KEY TO CONTINUE"
+ 110  GET A$: HOME 
+ 120  FOR I = 1 TO 6
+ 130  INPUT "NAME:  ";N$(I)
+ 140  FOR J = 1 TO 2
+ 150  PRINT : INPUT "GRADE:  ";A(I,J)
+ 160 A(I,3) = A(I,3) + A(I,J)
+ 170  NEXT J
+ 175  PRINT : PRINT 
+ 180 A(I,3) = A(I,3) / 2
+ 190  NEXT I
+ 200  HOME 
+ 210  PRINT "NAME";: HTAB (12): PRINT "AVERAGE"
+ 220  FOR I = 1 TO 6
+ 230  PRINT N$(I);: HTAB (14): PRINT A(I,J)
+ 240  PRINT 
+ 250  NEXT I
+ 260  END 

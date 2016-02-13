@@ -1,0 +1,88 @@
+ 10  REM  *** CLASS GRADES
+ 20  REM  *** JAY GRAVES
+ 30  REM  9/1/86
+ 40  HOME :D$ =  CHR$ (4)
+ 50  DIM S$(100),S1(100),S2(100)
+ 60  VTAB (5): PRINT "     This program will create a file "
+ 70  PRINT "of classes and the semester grades for"
+ 80  PRINT "each class."
+ 90  VTAB 22
+ 100  PRINT "PRESS ANY KEY TO CONTINUE": GET A$
+ 110  HOME : VTAB 5: PRINT "Chose one"
+ 120  VTAB 10: HTAB 10: PRINT "1) Make a new file"
+ 130  VTAB 12: HTAB 10: PRINT "2) Look at a file"
+ 140  VTAB 14: HTAB 10: PRINT "3) Delete a previous file"
+ 150  VTAB 16: HTAB 10: PRINT "4) Terminate program"
+ 160  VTAB (20): PRINT "Enter your choice: ";: GET A
+ 170  IF A = 1 THEN 220
+ 180  IF A = 2 THEN 460
+ 190  IF A = 3 THEN 690
+ 200  IF A = 4 THEN 870
+ 210  GOTO 110
+ 220  REM  *** MAKE A NEW FILE
+ 230  HOME : VTAB (5): HTAB (9): PRINT " *** Make a new file ***"
+ 240  VTAB 9: INPUT "Enter file name: ";F$
+ 250  HOME : VTAB 5: PRINT "File: ";F$
+ 260  VTAB 9: INPUT "How many classes ";E
+ 270  HOME : VTAB 5: PRINT "File: ";F$
+ 280  VTAB 9
+ 290  FOR I = 1 TO E
+ 300  INPUT "Class: ";S$(I)
+ 310  PRINT : INPUT "1st semester grade: ";S1(I)
+ 320  INPUT "2nd semester grade: ";S2(I)
+ 330  PRINT : PRINT 
+ 340  NEXT I
+ 350  PRINT D$;"OPEN "F$
+ 360  PRINT D$;"WRITE "F$
+ 370  PRINT E
+ 380  FOR I = 1 TO E
+ 390  PRINT S$(I)
+ 400  PRINT S1(I)
+ 410  PRINT S2(I)
+ 420  NEXT I
+ 430  PRINT D$;"CLOSE "F$
+ 440  PRINT : TEXT 
+ 450  GOTO 110
+ 460  REM  *** RETRIEVE FILES
+ 470  HOME : VTAB 5: HTAB 8: PRINT "*** Retrieve a file ***"
+ 480  VTAB 9: INPUT "File to be retrieved: ";F$
+ 490  HOME : VTAB 3: PRINT "File: ";F$
+ 500  VTAB 5
+ 510  PRINT "Name";: HTAB 12: PRINT "Grade 1";: HTAB 21: PRINT "Grade 2";: HTAB 30: PRINT "Average"
+ 520  PRINT "======================================="
+ 530  VTAB 7
+ 540  PRINT D$;"OPEN "F$
+ 550  PRINT D$;"READ "F$
+ 560  INPUT E
+ 570  FOR I = 1 TO E
+ 580  INPUT S$(I)
+ 590  INPUT S1(I)
+ 600  INPUT S2(I)
+ 610  NEXT I
+ 620  PRINT D$;"CLOSE "F$
+ 630  FOR I = 1 TO E
+ 640 A = (S1(I) + S2(I)) / 2
+ 650  PRINT S$(I);: HTAB 16: PRINT S1(I);: HTAB 25: PRINT S2(I);: HTAB 34: PRINT A
+ 660  NEXT I
+ 670  VTAB 22: PRINT "PRESS ANY KEY TO CONTINUE": GET A$
+ 680  GOTO 110
+ 690  REM  *** DELETING FILES
+ 700  HOME : VTAB 5: HTAB 9: PRINT "*** Delete a file ***"
+ 710  VTAB 9: INPUT "Enter file to be deleted ";F$
+ 720  VTAB 15: PRINT "This file is about to be sent to com-"
+ 730  PRINT "puter oblivion."
+ 740  VTAB 18: PRINT "If you want this to happen, PRESS 'X'"
+ 750  VTAB 20: PRINT "If this is not your wish, PRESS '0'"
+ 760  PRINT : GET A$
+ 770  IF A$ = "X" THEN 800
+ 780  IF A$ = "O" THEN 110
+ 790  GOTO 690
+ 800  HOME 
+ 810  HOME : VTAB 12: PRINT "Say goodbye to file ";F$
+ 820  PRINT D$;"DELETE ";F$
+ 830  HOME : VTAB 12: PRINT "Don't be sad. His final moments were"
+ 840  PRINT "spent among his best file friends"
+ 850  FOR I = 1 TO 2500: NEXT I
+ 860  GOTO 110
+ 870  REM  *** END
+ 880  HOME : END 

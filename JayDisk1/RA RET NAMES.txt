@@ -1,0 +1,20 @@
+ 10  REM  *** RA RET NAMES
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 3/13/86
+ 40 D$ =  CHR$ (4)
+ 45  DIM N$(15)
+ 50  HOME 
+ 60  VTAB (5): PRINT "This program will retrieve 15 names"
+ 70  PRINT "from a random access file."
+ 80  VTAB (22): FLASH : PRINT "PRESS ANY KEY TO CONTINUE"
+ 90  GET A$: PRINT : NORMAL : HOME 
+ 100  PRINT D$;"OPEN RANAMES,L15"
+ 110  FOR I = 1 TO 15
+ 120  PRINT D$;"READ RANAMES,R"I
+ 130  INPUT N$(I)
+ 140  NEXT I
+ 150  PRINT D$;"CLOSE RANAMES"
+ 160  FOR I = 1 TO 15
+ 170  PRINT N$(I)
+ 180  NEXT I
+ 190  END 

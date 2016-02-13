@@ -1,0 +1,15 @@
+ 10  REM ...COLOR CHART
+ 20  REM ...JAY GRAVES
+ 30  REM ...DEC. 2,1986
+ 40  HOME : GR 
+ 50 C = 0
+ 60  FOR X = 0 TO 39 STEP 2
+ 65  IF C = 16 THEN 120
+ 70  COLOR= C
+ 80  VLIN 0,39 AT X
+ 85  VLIN 0,39 AT X + 1
+ 90 C = C + 1: NEXT X
+ 120  VTAB (22)
+ 130  PRINT "0 1 2 3 4 5 6 7 8 9 1 1 1 1 1 1"
+ 140  PRINT "                    0 1 2 3 4 5"
+ 150  END 

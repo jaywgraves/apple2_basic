@@ -1,0 +1,2 @@
+ 10  PRINT "AMANDA   ";
+ 20  GOTO 10

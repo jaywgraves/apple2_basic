@@ -1,0 +1,17 @@
+ 10  HOME : PR# 2
+ 15  PRINT "PS 3"
+ 17  PRINT "MA 1500,800"
+ 20  FOR T = 0 TO 6.3 STEP .2
+ 30 X = 300 *  COS (T)
+ 40 Y = 300 *  SIN (T)
+ 45 X = 1200 + X:Y = 800 + Y
+ 55  GOSUB 100
+ 60  NEXT T
+ 65  PRINT "CH"
+ 66  PR# 0
+ 70  END 
+ 100  PRINT "DA "X","Y: PRINT "DA "X + 640","Y + 320
+ 104  PRINT "DA "X","Y: PRINT "DA "X + 640","Y - 320
+ 105  PRINT "DA "X","Y: PRINT "DA "X - 640","Y - 320
+ 106  PRINT "DA "X","Y: PRINT "DA "X - 640","Y + 320
+ 110  RETURN 

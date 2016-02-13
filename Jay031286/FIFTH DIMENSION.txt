@@ -1,0 +1,17 @@
+ 1 X = 2
+ 2 Q = 0
+ 10  REM  >>> FIFTH DIMENSION
+ 20  HOME 
+ 30  DIM X$(X,X,X,X,X)
+ 40  FOR A = 1 TO X
+ 50  FOR B = 1 TO X
+ 60  FOR C = 1 TO X
+ 70  FOR D = 1 TO X
+ 80  FOR E = 1 TO X
+ 90  PRINT "X$ ("A","B","C","D","E")"
+ 100  INPUT X$(A,B,C,D,E):Q = Q + 1
+ 110  NEXT E: NEXT D: NEXT C: NEXT B: NEXT A
+ 111  HOME : PRINT Q
+ 120  INPUT A,B,C,D,E
+ 130  PRINT X$(A,B,C,D,E)
+ 140  GOTO 120

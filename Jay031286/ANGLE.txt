@@ -1,0 +1,23 @@
+ 1  REM  *** ALEX BACA
+ 2  REM  *** ANGLE 
+ 3  REM  *** APRIL.10,1987
+ 10  HGR 
+ 20 R = 7:D = 3:C = 3
+ 30  INPUT "ANGLE-IN DEGREES =";A
+ 35  IF A = 0 THEN 190
+ 40  HGR 
+ 50 N = 360 / A: HCOLOR= C
+ 60 A = A * (3.14159 / 180)
+ 70 X1 = 100:Y1 = 70
+ 80  HPLOT X1,Y1
+ 90 I = 0
+ 100 X2 = R *  COS (A * I) + X1
+ 110 Y2 =  - R *  SIN (A * I) + Y1
+ 120  IF X2 < 0 OR X2 > 290 THEN 10
+ 130  IF Y2 < 0 OR Y2 > 150 THEN 10
+ 140  HPLOT  TO X2,Y2
+ 150 X1 = X2:Y1 = Y2
+ 160 R = R + D
+ 170 I = I + 1
+ 180  GOTO 100
+ 190  GET A$: TEXT : HOME : LIST 

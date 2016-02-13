@@ -1,0 +1,28 @@
+ 10  REM  *** COMPUTER GUESS
+ 15  REM  *** REVAMPED 10-11-88
+ 20  REM  ** JAY GRAVES
+ 29  DIM X(100),C(1000)
+ 30  REM  * 4/27/87
+ 31  FOR A = 1 TO 1000
+ 35 H = 100:L = 0:R = 101
+ 36 C = 0
+ 50 X =  INT ( RND (1) * 101)
+ 80 Y =  INT ( RND (1) * R) + L
+ 81 C = C + 1
+ 90  IF Y > X THEN  GOSUB 120
+ 100  IF Y < X THEN  GOSUB 150
+ 110  IF Y = X GOTO 180
+ 115  GOTO 80
+ 120  REM  *** TO HIGH
+ 130 H = Y - 1
+ 135 R = H - L + 1
+ 140  RETURN 
+ 150  REM  *** TO LOW
+ 160 L = Y + 1
+ 165 R = H - L + 1
+ 170  RETURN 
+ 180  REM  *** RIGHT
+ 190 X(C(A)) = X(C(A)) + 1
+ 200  PRINT A,C,X
+ 230  NEXT A
+ 240  END 

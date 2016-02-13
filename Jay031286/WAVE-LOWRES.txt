@@ -1,0 +1,12 @@
+ 10  ONERR  GOTO 205
+ 11 X = 0
+ 12 I = 5
+ 50  HOME : GR : COLOR= 3
+ 110  FOR T = 0 TO 20 STEP .4
+ 111 X = X + 1
+ 120 A =  INT (20 + I *  SIN (T))
+ 130  PLOT X,A
+ 200  NEXT T
+ 205  VTAB 22: GET A$
+ 207  TEXT : HOME 
+ 210  END 

@@ -1,0 +1,20 @@
+ 10  REM  *** TWO-DIM ADDRESS
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 2/8/87
+ 40  HOME 
+ 50  DIM X$(5,5)
+ 60  FOR I = 1 TO 5
+ 70  INPUT "NAME: ";X$(I,1)
+ 80  INPUT "ADDRESS: ";X$(I,2)
+ 90  INPUT "CITY: ";X$(I,3)
+ 91  INPUT "STATE: ";X$(I,4)
+ 92  INPUT "ZIP: ";X$(I,5)
+ 93  PRINT : PRINT 
+ 100  NEXT I
+ 110  FOR I = 1 TO 5
+ 120  PRINT X$(I,1)
+ 130  PRINT X$(I,2)
+ 140  PRINT X$(I,3);", ";X$(I,4);" ";X$(I,5)
+ 150  PRINT 
+ 160  NEXT I
+ 170  END 

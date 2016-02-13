@@ -1,0 +1,14 @@
+ 11 X = 0
+ 50  HOME : HGR 
+ 60 I =  INT ( RND (1) * 25) + 1
+ 65 X = 0
+ 70 R =  INT ( RND (1) * 100)
+ 80  HCOLOR=  INT ( RND (1) * 8)
+ 90  HPLOT 140,0
+ 110  FOR T = 0 TO 65 STEP .4
+ 111 X = X + 1
+ 120 A =  INT (140 + I *  SIN (T))
+ 130  HPLOT  TO A,X
+ 140  HPLOT A - R,X TO A + R,X TO A,X
+ 200  NEXT T
+ 210  GOTO 60

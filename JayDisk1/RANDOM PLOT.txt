@@ -1,0 +1,15 @@
+ 10  REM  *** RANDOM PLOT
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 4/1/86
+ 40  HOME 
+ 50  GR 
+ 55  FOR I = 1 TO 1200
+ 60 C =  INT ( RND (1) * 15)
+ 70 X =  INT ( RND (1) * 39)
+ 80 Y =  INT ( RND (1) * 39)
+ 90  COLOR= C
+ 100  PLOT X,Y
+ 110  NEXT I
+ 120  VTAB (22): GET A$: PRINT 
+ 130  TEXT : HOME 
+ 140  END 

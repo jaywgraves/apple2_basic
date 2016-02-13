@@ -1,0 +1,31 @@
+ 100  REM  *** TEXT
+ 110  REM  *** JAY GRAVES
+ 120  REM  *** OCT. 31, 1985
+ 125  SPEED= 100
+ 130  HOME 
+ 140  VTAB (2): HTAB (15): PRINT "COMPUTERS"
+ 150  VTAB (6): PRINT "   When you think about it a computer"
+ 160  PRINT "is a worthless machine. Unless you need"
+ 170  PRINT "a place to set your glass so you do"
+ 180  PRINT "not leave rings on the furniture and"
+ 190  PRINT "get in trouble with your mother."
+ 200  PRINT "   But a computer can be useful if you"
+ 210  PRINT "have had the 11 years of post-graduate"
+ 220  PRINT "work required to operate one of these"
+ 230  PRINT "expensive and complex machines. Only a"
+ 240  PRINT "trained and keen mind can make one of"
+ 250  PRINT "these babies work right."
+ 260  PRINT "   But computers also have their merits"
+ 270  PRINT "just like any other machine. For exam-"
+ 280  PRINT "ple computers can be used to play video"
+ 290  PRINT "games. How about a quick game of GALAGA"
+ 300  PRINT "anybody?"
+ 310  PRINT : PRINT "PRESS ANY KEY TO CONTINUE"
+ 320  GET A$
+ 321  HOME 
+ 322  PRINT : PRINT : PRINT "NOT THAT KEY STUPID! TRY AGAIN!!"
+ 324  GET A$
+ 330  HOME 
+ 340  VTAB (10): HTAB (13): PRINT "END OF PROGRAM"
+ 345  SPEED= 255
+ 350  END 

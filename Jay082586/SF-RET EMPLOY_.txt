@@ -1,0 +1,57 @@
+ 10  REM  *** SF-RET EMPLOY*
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 9-22-86
+ 40  HOME :D$ =  CHR$ (4)
+ 50  DIM N(20),X(20),A(20),Y(20),S(30)
+ 60  REM  *** VARIABLES
+ 70  REM  * N = ID#
+ 80  REM  * X = SEX
+ 90  REM  * A = AGE
+ 100  REM  * Y = YRS OF SERVICE
+ 110  REM  * S = SALARY
+ 120  REM  *** TITLE PG
+ 130  VTAB 5: HTAB 3: PRINT "This program will retrieve the file"
+ 140  PRINT "EMPLOY*.  Then it will print out the"
+ 150  PRINT "data for the employees whose salaries"
+ 160  PRINT "are over 15,000.  It will also print"
+ 170  PRINT "out the average salary of the two sex"
+ 180  PRINT "codes."
+ 190  VTAB 22: PRINT "PRESS ANY KEY TO CONTINUE": GET A$: HOME 
+ 200  REM  *** RET FILE: EMPLOY*
+ 210  VTAB 12: PRINT "Retrieving the file: EMPLOY*"
+ 220  PRINT D$;"OPEN EMPLOY*"
+ 230  PRINT D$;"READ EMPLOY*"
+ 240  FOR I = 1 TO 11
+ 250  INPUT N(I)
+ 260  INPUT X(I)
+ 270  INPUT A(I)
+ 280  INPUT Y(I)
+ 290  INPUT S(I)
+ 300  NEXT I
+ 310  PRINT D$;"CLOSE EMPLOY*"
+ 320  REM  *** FIND SALARY OVER 15000
+ 330  HOME 
+ 340  HTAB 4: PRINT "PEOPLE WITH SALARIES OF 15,000"
+ 350  PRINT : HTAB 22: PRINT "Yrs. of"
+ 360  HTAB 2: PRINT "ID#";: HTAB 9: PRINT "Sex";: HTAB 16: PRINT "Age";: HTAB 22: PRINT "Service";: HTAB 33: PRINT "Salary"
+ 370  PRINT "======================================="
+ 380  PRINT 
+ 390  FOR I = 1 TO 11
+ 400  IF S(I) > 15000 THEN  GOSUB 430
+ 410  NEXT I
+ 420  GOTO 459
+ 430  PRINT N(I);: HTAB 10: PRINT X(I);: HTAB 17: PRINT A(I);: HTAB 25: PRINT Y(I);: HTAB 33: PRINT "$";S(I)
+ 440  RETURN 
+ 459  VTAB 22: PRINT "Press any key to see the averages"
+ 460  GET A$: HOME 
+ 470  REM  *** AVERAGE SEX CODE SALARY
+ 471  HOME 
+ 480  FOR I = 1 TO 11
+ 490  IF X(I) = 1 THEN  GOSUB 530
+ 500  IF X(I) = 2 THEN  GOSUB 570
+ 510  NEXT I
+ 520  GOTO 610
+ 530  REM  * SEX CODE 1
+ 540 T1 = T1 + S(I)
+ 550 C1 = C1 + 1
+ 48 

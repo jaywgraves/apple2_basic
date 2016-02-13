@@ -1,0 +1,6 @@
+ 20 HR = 279:VR = 191: HGR2 
+ 30  HCOLOR=  RND (1) * 8
+ 40 X =  RND (1) * HR / 2:Y =  RND (1) * VR / 2
+ 60  HPLOT X,Y: HPLOT HR - X,VR - Y
+ 70  HPLOT HR - X,Y: HPLOT X,VR - Y
+ 100  GOTO 30

@@ -1,0 +1,2 @@
+ 10  HOME : HGR 
+ 20 X = 0:I =  INT ( RND (1) * 25) + 1:R =  INT ( RND (1) * 130): HCOLOR=  INT ( RND (1) * 8): HPLOT 140,0: FOR T = 0 TO 63.6 STEP .4:X = X + 1:A =  INT (140 + I *  SIN (T)): HPLOT  TO A,X: HPLOT A - R,X TO A + R,X: NEXT T: GOTO 20

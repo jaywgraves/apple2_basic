@@ -1,0 +1,13 @@
+ 10  HOME 
+ 11  DIM C(50,50)
+ 12  VTAB 21: INPUT " CHANGE :";C
+ 13  VTAB 22: INPUT " TO :";B
+ 20  FOR X = 0 TO 39
+ 30  FOR Y = 0 TO 39
+ 40 C(X,Y) =  SCRN( X,Y)
+ 41  IF C(X,Y) = C THEN 45
+ 42  GOTO 50
+ 45 C(X,Y) = B: COLOR= C(X,Y): PLOT X,Y
+ 50  NEXT Y
+ 60  NEXT X
+ 70  END 

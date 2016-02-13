@@ -1,0 +1,14 @@
+ 10  HOME : HGR 
+ 11  HCOLOR= 4: HPLOT 0,0
+ 20  HCOLOR=  INT ( RND (1) * 8)
+ 30 X1 = 0:Y1 =  INT ( RND (1) * 159)
+ 35  HPLOT X1,Y1
+ 40  HPLOT  TO X1,Y1
+ 50 Y = 159:X =  INT ( RND (1) * 279)
+ 60  HPLOT  TO X,Y
+ 70 X = 279:Y =  INT ( RND (1) * 159)
+ 80  HPLOT  TO X,Y
+ 90 Y = 0:X =  INT ( RND (1) * 279)
+ 100  HPLOT  TO X,Y
+ 105  HPLOT  TO X1,Y1
+ 110  GOTO 20

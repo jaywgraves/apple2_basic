@@ -1,0 +1,21 @@
+ 10  REM  *** AVERAGE
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** SEPT. 17, 1985
+ 40  HOME 
+ 50  PRINT "This program will print the averages"
+ 60  PRINT "of three sets of numbers."
+ 70  PRINT "A NEGATIVE FIRST NUMBER WILL END"
+ 80  PRINT "THIS PROGRAM."
+ 90  PRINT : PRINT "PRESS ANY KEY TO CONTINUE"
+ 100  GET A$
+ 110  HOME 
+ 120  INPUT "1st number  ";A
+ 130  INPUT "2nd number  ";B
+ 140  INPUT "3rd number  ";C
+ 150  IF A < 0 THEN 200
+ 160 D = (A + B + C) / 3
+ 170  PRINT : PRINT : PRINT "AVERAGE   "D
+ 180  FOR I = 1 TO 1550: NEXT I
+ 190  GOTO 110
+ 200  PRINT : PRINT "END OF PROGRAM"
+ 210  END 

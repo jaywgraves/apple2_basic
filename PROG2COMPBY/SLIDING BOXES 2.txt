@@ -1,0 +1,2 @@
+ 10  HOME : GR :C2 =  INT ( RND (1) * 15) + 1
+ 20 C1 =  INT ( RND (1) * 15) + 1: FOR X = 0 TO 19: COLOR= C1: VLIN 0,39 AT X: COLOR= C2: VLIN 0,39 AT X + 20: NEXT X:C2 = C1: GOTO 20

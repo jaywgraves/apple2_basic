@@ -1,0 +1,24 @@
+ 5  HOME 
+ 10  GR 
+ 20 X = 0:Y = 39
+ 25 C =  INT ( RND (1) * 14) + 1
+ 30  FOR I = 0 TO 19
+ 35  COLOR= C
+ 40  HLIN X,Y AT X
+ 50  HLIN X,Y AT Y
+ 60  VLIN X,Y AT X
+ 70  VLIN X,Y AT Y
+ 80 X = X + 1
+ 90 Y = Y - 1
+ 100  NEXT I
+ 110 X = 0:Y = 39
+ 115  FOR I = 0 TO 19
+ 120  COLOR= 0
+ 130  HLIN X,Y AT X
+ 140  HLIN X,Y AT Y
+ 150  VLIN X,Y AT X
+ 160  VLIN X,Y AT Y
+ 170 X = X + 1
+ 180 Y = Y - 1
+ 190  NEXT I
+ 200  GOTO 20

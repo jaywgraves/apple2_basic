@@ -1,0 +1,12 @@
+ 10  HOME : HGR 
+ 11  HCOLOR= 1
+ 12  HPLOT 140,80
+ 20 C =  INT ( RND (1) * 7)
+ 21  IF C = 4 THEN 20
+ 22  IF C = 0 THEN 20
+ 25  HCOLOR= C
+ 26  HPLOT X,Y
+ 30 X =  INT ( RND (1) * 279)
+ 40 Y =  INT ( RND (1) * 159)
+ 60  HPLOT  TO X,Y
+ 70  GOTO 20

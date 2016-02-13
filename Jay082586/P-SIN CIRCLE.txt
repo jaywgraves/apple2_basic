@@ -1,0 +1,15 @@
+ 10  REM  *** P-SIN CIRCLE
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** FEB. 4, 1987
+ 40  HOME : PR# 2
+ 50  PRINT "PS 3"
+ 60 X = 30
+ 70 I = 300
+ 80  FOR T = 10 TO 36 STEP .4
+ 90 X = X + 20
+ 100 Y =  INT (800 + I *  SIN (T))
+ 110  PRINT "CA 50,"X","Y
+ 120  NEXT T
+ 130  PRINT "CH"
+ 140  PR# 0
+ 150  HOME : LIST : END 

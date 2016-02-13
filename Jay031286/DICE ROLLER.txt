@@ -1,0 +1,50 @@
+ 10  REM  *** DICE
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 2/21/86
+ 40  HOME 
+ 50  VTAB (5): PRINT "This program will roll a die 1200 times"
+ 60  PRINT "and give you the result in a table"
+ 70  VTAB (21): INVERSE : PRINT "PRESS ANY KEY TO CONTINUE"
+ 80  GET A$: NORMAL : HOME 
+ 90  VTAB (5): PRINT "ONE"
+ 100  VTAB (7): PRINT "TWO"
+ 110  VTAB (9): PRINT "THREE"
+ 120  VTAB (11): PRINT "FOUR"
+ 130  VTAB (13): PRINT "FIVE"
+ 140  VTAB (15): PRINT "SIX"
+ 150  FOR I = 1 TO 1200
+ 160 X =  INT ( RND (1) * 6) + 1
+ 170  IF X = 1 THEN  GOSUB 250
+ 180  IF X = 2 THEN  GOSUB 290
+ 190  IF X = 3 THEN  GOSUB 330
+ 200  IF X = 4 THEN  GOSUB 370
+ 210  IF X = 5 THEN  GOSUB 410
+ 220  IF X = 6 THEN  GOSUB 450
+ 230  NEXT I
+ 240  GOTO 490
+ 250  REM  *** 'A' or '1' 
+ 260 A = A + 1
+ 270  VTAB (5): HTAB (10): PRINT A
+ 280  RETURN 
+ 290  REM  *** 'B' or '2'
+ 300 B = B + 1
+ 310  VTAB (7): HTAB (10): PRINT B
+ 320  RETURN 
+ 330  REM  *** 'C' or '3'
+ 340 C = C + 1
+ 350  VTAB (9): HTAB (10): PRINT C
+ 360  RETURN 
+ 370  REM  *** 'D' or '4'
+ 380 D = D + 1
+ 390  VTAB (11): HTAB (10): PRINT D
+ 400  RETURN 
+ 410  REM  *** 'E' or '5'
+ 420 E = E + 1
+ 430  VTAB (13): HTAB (10): PRINT E
+ 440  RETURN 
+ 450  REM  *** 'F' or '6'
+ 460 F = F + 1
+ 470  VTAB (15): HTAB (10): PRINT F
+ 480  RETURN 
+ 490  VTAB (22): PRINT 
+ 500  END 

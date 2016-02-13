@@ -1,0 +1,26 @@
+ 10  REM  *** COIN FLIP  
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 2/21/86
+ 35  HOME 
+ 40  VTAB (5): PRINT "This program will flip a coin 1000"
+ 50  PRINT "times and give you the results."
+ 60  VTAB (21): PRINT "PRESS ANY KEY TO CONTINUE"
+ 70  GET A$: HOME 
+ 80  VTAB (10): PRINT "HEADS:"
+ 90  VTAB (15): PRINT "TAILS:"
+ 100  FOR I = 1 TO 1000
+ 110 X =  INT ( RND (1) * 2) + 1
+ 120  IF X = 1 THEN  GOSUB 150
+ 130  IF X = 2 THEN  GOSUB 190
+ 140  NEXT I
+ 145  GOTO 230
+ 150  REM  *** '1' or 'HEADS'
+ 160 H = H + 1
+ 170  VTAB (10): HTAB (10): PRINT H
+ 180  RETURN 
+ 190  REM  *** '2' or 'TAILS'
+ 200 T = T + 1
+ 210  VTAB (15): HTAB (10): PRINT T
+ 220  RETURN 
+ 230  VTAB (20): PRINT 
+ 240  END 

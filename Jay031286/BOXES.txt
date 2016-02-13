@@ -1,0 +1,8 @@
+ 10  HOME : HGR 
+ 20  HCOLOR=  INT ( RND (1) * 8)
+ 30 A =  INT ( RND (1) * 140)
+ 40 B =  INT ( RND (1) * 80)
+ 45  FOR X = A TO 279 - A
+ 50  HPLOT X,B TO X,159 - B
+ 60  NEXT X
+ 70  GOTO 20

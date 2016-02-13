@@ -1,0 +1,6 @@
+ 10  HOME : HGR : HCOLOR= 3
+ 20  FOR T = 0 TO 6.3 STEP .1
+ 30 X = 40 *  COS (T)
+ 40 Y = 40 *  SIN (T)
+ 50  HPLOT 140 + X,80 + Y
+ 60  NEXT T

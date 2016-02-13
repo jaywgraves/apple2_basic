@@ -1,0 +1,38 @@
+ 10  REM  *** TWO-DIM GRADES
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 2/6/87
+ 40  PR# 3: HOME 
+ 50  DIM N$(5),G(6,4)
+ 60  FOR I = 1 TO 5
+ 70  READ N$(I)
+ 80  FOR J = 1 TO 3
+ 90  READ G(I,J)
+ 100 G(6,J) = G(6,J) + G(I,J)
+ 110 G(I,4) = G(I,4) + G(I,J)
+ 120  NEXT J
+ 130 G(6,4) = G(6,4) + G(I,4)
+ 140  NEXT I
+ 150  DATA  JAY,98,90,95
+ 160  DATA  JEN,86,89,92
+ 170  DATA  JAMES,97,92,90
+ 180  DATA  JOHN,89,92,86
+ 190  DATA  JACK,78,87,90
+ 200  FOR I = 1 TO 5
+ 210 G(I,4) = G(I,4) / 3
+ 220 G(I,4) =  INT (G(I,4) + .5)
+ 230  NEXT I
+ 240  FOR J = 1 TO 3
+ 250 G(6,J) = G(6,J) / 5
+ 260 G(6,J) =  INT (G(6,J) + .5)
+ 270  NEXT J
+ 280 G(6,4) = G(6,4) / 15
+ 290 G(6,4) =  INT (G(6,4) + .5)
+ 300  PRINT "NAME";: HTAB 20: PRINT "GRADE 1";: HTAB 35: PRINT "GRADE 2";: HTAB 50: PRINT "GRADE 3";: HTAB 70: PRINT "AVERAGE"
+ 310  PRINT "-------------------------------------------------------------------------------"
+ 320  PRINT 
+ 330  FOR I = 1 TO 5
+ 340  PRINT N$(I);: HTAB 23: PRINT G(I,1);: HTAB 38: PRINT G(I,2);: HTAB 53: PRINT G(I,3);: HTAB 73: PRINT G(I,4)
+ 350  NEXT I
+ 360  PRINT 
+ 370  PRINT "AVERAGE";: HTAB 23: PRINT G(6,1);: HTAB 38: PRINT G(6,2);: HTAB 53: PRINT G(6,3);: HTAB 73: PRINT G(6,4)
+ 380  END 

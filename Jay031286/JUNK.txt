@@ -1,0 +1,8 @@
+ 10  HOME 
+ 20  FOR V = 1 TO 23
+ 30  FOR I = 1 TO 80
+ 40 X =  INT ( RND (1) * 26) + 65
+ 45 X$ =  CHR$ (X)
+ 50  VTAB V: PRINT X$;
+ 55  NEXT I
+ 60  NEXT V

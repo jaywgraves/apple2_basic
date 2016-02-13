@@ -1,0 +1,16 @@
+ 10  REM  *** RANDOM 5X5 
+ 20  REM  *** JAY GRAVES
+ 21  REM  ***      &
+ 22  REM  *** JAMES STONE  
+ 30  REM  *** 12-2-86
+ 40  HOME : GR 
+ 50  FOR I = 1 TO 50
+ 60 X =  INT ( RND (1) * 35)
+ 70 Y =  INT ( RND (1) * 35)
+ 80  COLOR=  INT ( RND (1) * 15)
+ 90  FOR D = 0 TO 4
+ 100  HLIN X,X + 4 AT Y + D
+ 110  NEXT D
+ 120  NEXT I
+ 130  VTAB 22: GET A$: PRINT 
+ 140  TEXT : HOME : END 

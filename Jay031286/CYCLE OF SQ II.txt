@@ -1,0 +1,23 @@
+ 5  HOME 
+ 10  GR 
+ 12 A =  INT ( RND (1) * 15) + 1
+ 13 B =  INT ( RND (1) * 15) + 1
+ 14  IF A = B THEN 13
+ 15 Z = 1
+ 20 X = 0:Y = 39
+ 30  FOR I = 0 TO 39
+ 35  ON Z GOTO 120,150
+ 40  HLIN X,Y AT X
+ 50  HLIN X,Y AT Y
+ 60  VLIN X,Y AT X
+ 70  VLIN X,Y AT Y
+ 80 X = X + 1
+ 90 Y = Y - 1
+ 100  NEXT I
+ 110  GOTO 12
+ 120  COLOR= A
+ 130 Z = 2
+ 140  GOTO 40
+ 150  COLOR= B
+ 160 Z = 1
+ 170  GOTO 40

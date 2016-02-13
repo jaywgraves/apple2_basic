@@ -1,0 +1,30 @@
+ 10  REM  *** ROMAN
+ 40  DIM R$(25),N(25),N$(25)
+ 50  REM  * GET *
+ 60  HOME 
+ 70  INPUT "ROMAN NUMERAL:   ";R$
+ 80  IF R$ = "ZZZ" THEN 310
+ 90  FOR A = 1 TO  LEN (R$)
+ 100 N$(A) =  MID$ (R$,A,1)
+ 110  IF N$(A) = "M" THEN N(A) = 1000
+ 120  IF N$(A) = "D" THEN N(A) = 500
+ 130  IF N$(A) = "C" THEN N(A) = 100
+ 140  IF N$(A) = "L" THEN N(A) = 50
+ 150  IF N$(A) = "X" THEN N(A) = 10
+ 160  IF N$(A) = "V" THEN N(A) = 5
+ 170  IF N$(A) = "I" THEN N(A) = 1
+ 180  NEXT A
+ 190 Y = 0
+ 200  IF  LEN (R$) = 1 THEN N(2) = 0
+ 210  REM  * FIGURE *
+ 220  FOR B = 1 TO A - 1
+ 230  IF N(B) >  = N(B + 1) THEN Y = Y + N(B)
+ 240  IF N(B) < N(B + 1) THEN Y = Y - N(B)
+ 250  NEXT B
+ 260  REM  * PRINT *
+ 270  PRINT "THE ROMAN NUMERAL "R$
+ 280  PRINT "IS EQUAL THE ARABIC NUMBER "Y
+ 290  PRINT 
+ 300  GOTO 70
+ 310  END 
+ 320  DATA  LXXXVII,CCXIX,MCCCLIV,MMDCLXXIII,MCDLXXVI,X,ZZZ

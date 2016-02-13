@@ -1,0 +1,20 @@
+ 10  REM  *** SF RET Names
+ 20  REM  ** JAY GRAVES
+ 40 D$ =  CHR$ (4)
+ 41  PRINT 
+ 45  DIM N$(15)
+ 50  HOME 
+ 60  VTAB (5): PRINT "This program will retrieve 15 names"
+ 70  PRINT "in a sequential file."
+ 80  VTAB (21): PRINT "PRESS ANY KEY TO CONTINUE"
+ 90  GET A$: PRINT : HOME 
+ 100  PRINT D$;"OPEN SFNAMES"
+ 110  PRINT D$;"READ SFNAMES"
+ 120  FOR I = 1 TO 15
+ 130  INPUT N$(I)
+ 140  NEXT I
+ 150  PRINT D$;"CLOSE SFNAMES"
+ 160  FOR I = 1 TO 15
+ 170  PRINT N$(I)
+ 180  NEXT I
+ 190  END 

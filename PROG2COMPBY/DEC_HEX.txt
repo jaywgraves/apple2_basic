@@ -1,0 +1,2 @@
+ 10  PRINT : PRINT : INPUT "HEX: ";A$: ON A$ = "" GOTO 20:V = 0: FOR J = 1 TO  LEN (A$):C =  ASC ( MID$ (A$,J,1)): ON (C > 70 OR C < 48 OR (C > 57 AND C < 65)) GOTO 10:V = V * 16 + C - 48 - 7 * (C < 64): NEXT : PRINT "DEC: ";V: GOTO 10
+ 20  PRINT : PRINT : INPUT "DEC: ";A$:A =  VAL (A$): ON A = 0 GOTO 10:E$ = "": FOR I = 1 TO 99:B =  INT (A / 16):C = (A / 16 - B) * 16:C$ =  CHR$ (C + 48 + 7 * (C > 9)):E$ = C$ + E$:A = B:I = I + 99 * (B = 0): NEXT : PRINT "HEX: ";E$: GOTO 20

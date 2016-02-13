@@ -1,0 +1,11 @@
+ 10  HOME : HGR 
+ 20  FOR J = 1 TO 20
+ 30  HCOLOR=  INT (7 *  RND (1))
+ 40 X =  INT (200 *  RND (1)) + 40
+ 50 Y =  INT (80 *  RND (1)) + 40
+ 60  FOR K = 1 TO 30
+ 70 X1 = 80 *  RND (1) - 40
+ 80 Y1 = 80 *  RND (1) - 40
+ 90  HPLOT X,Y TO X + X1,Y + Y1
+ 100  NEXT K
+ 110  NEXT J

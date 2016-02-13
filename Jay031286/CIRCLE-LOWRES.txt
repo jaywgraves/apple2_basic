@@ -1,0 +1,6 @@
+ 10  HOME : GR : COLOR= 1
+ 20  FOR T = .1 TO 6.3 STEP .1
+ 30 X = 10 *  COS (T)
+ 40 Y = 10 *  SIN (T)
+ 50  PLOT 20 + X,20 + Y
+ 60  NEXT T

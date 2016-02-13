@@ -1,0 +1,18 @@
+ 10  REM  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 20  REM  > ARTIFICIAL INTELLIGENCE SIMULATION >
+ 30  REM  >               BY                   >
+ 40  REM  >           JAY GRAVES               >
+ 50  REM  >      FOR DR. D. WILLIAMSON         >
+ 60  REM  >            PSY 350B                >
+ 70  REM  >   CURRENT ISSUES IN PSYCHOLOGY     >
+ 80  REM  >     ARTIFICIAL INTELLIGENCE        >
+ 90  REM  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ 91 :
+ 100  REM  >>> INITALIZE VARIABLES
+ 101 LF = 10
+ 102 G = 1
+ 103 X1 = 1:Y1 = 1
+ 104 C(X1,Y1) = 0
+ 199 :
+ 200  REM  >>> MAIN CHECK LOOP
+ 210  IF LF = 0 THEN 

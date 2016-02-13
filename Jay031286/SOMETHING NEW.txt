@@ -1,0 +1,26 @@
+ 10  HOME : GR 
+ 15 Y = 0:X = 39
+ 20  FOR I = 39 TO 0 STEP  - 1
+ 30  COLOR=  INT ( RND (1) * 15)
+ 40  VLIN X,Y AT I
+ 50 Y = Y + 1:X = X - 1
+ 60  NEXT I
+ 70 Y = 0:X = 39
+ 80  FOR I = 39 TO 0 STEP  - 1
+ 90  COLOR=  INT ( RND (1) * 15)
+ 100  HLIN X,Y AT I
+ 110 Y = Y + 1:X = X - 1
+ 120  NEXT I
+ 130 Y = 0:X = 39
+ 140  FOR I = 39 TO 0 STEP  - 1
+ 150  COLOR= 0
+ 160  VLIN X,Y AT I
+ 170 Y = Y + 1:X = X - 1
+ 180  NEXT I
+ 190 Y = 0:X = 39
+ 200  FOR I = 39 TO 0 STEP  - 1
+ 210  COLOR= 0
+ 220  HLIN X,Y AT I
+ 230 Y = Y + 1:X = X - 1
+ 240  NEXT I
+ 250  GOTO 15

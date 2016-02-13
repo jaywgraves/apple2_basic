@@ -1,0 +1,14 @@
+ 10  HOME : PR# 2
+ 20  PRINT "PS 4"
+ 30  PRINT "MA 1225,800"
+ 35 Q = 25
+ 40  FOR T = 0 TO 6.4 STEP .06
+ 50 R = Q *  COS ( SIN (6 * T))
+ 60 X = R *  COS (T)
+ 70 Y = R *  SIN (T)
+ 80 X = X + 1200
+ 90 Y = Y + 800
+ 110  PRINT "DA "X","Y
+ 115  NEXT T
+ 120  PRINT "CH"
+ 130  PR# 0

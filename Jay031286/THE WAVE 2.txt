@@ -1,0 +1,10 @@
+ 11 X = 0
+ 12 I = 10
+ 50  HOME : HGR : HCOLOR= 3
+ 60  HPLOT 0,100
+ 110  FOR T = 0 TO 100 STEP .4
+ 111 X = X + 1
+ 120 A =  INT (100 + I *  SIN (T))
+ 130  HPLOT  TO X,A
+ 200  NEXT T
+ 210  END 

@@ -1,0 +1,15 @@
+ 1  REM  >>> SLIDING BOXES
+ 2  REM  >>> JAY GRAVES
+ 3  REM  >>> 3-28-88
+ 10  HOME : GR 
+ 20 C2 =  INT ( RND (1) * 15) + 1
+ 30 C1 =  INT ( RND (1) * 15) + 1
+ 31  IF C1 = C2 THEN 30
+ 40  FOR X = 0 TO 19
+ 50  COLOR= C1
+ 60  VLIN 0,39 AT X
+ 70  COLOR= C2
+ 80  VLIN 0,39 AT X + 20
+ 90  NEXT X
+ 100 C2 = C1
+ 110  GOTO 30

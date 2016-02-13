@@ -1,0 +1,24 @@
+ 1  DIM X$(255)
+ 10 X = 0
+ 20  FOR A = 0 TO 1: FOR B = 0 TO 1: FOR C = 0 TO 1: FOR D = 0 TO 1: FOR E = 0 TO 1: FOR F = 0 TO 1: FOR G = 0 TO 1: FOR H = 0 TO 1
+ 40  IF A = 1 THEN X = X + 128
+ 50  IF B = 1 THEN X = X + 64
+ 60  IF C = 1 THEN X = X + 32
+ 70  IF D = 1 THEN X = X + 16
+ 80  IF E = 1 THEN X = X + 8
+ 90  IF F = 1 THEN X = X + 4
+ 100  IF G = 1 THEN X = X + 2
+ 110  IF H = 1 THEN X = X + 1
+ 111 A$ =  STR$ (A):B$ =  STR$ (B):C$ =  STR$ (C):D$ =  STR$ (D):E$ =  STR$ (E):F$ =  STR$ (F):G$ =  STR$ (G):H$ =  STR$ (H)
+ 112 X$ = A$ + B$ + C$ + D$ + E$ + F$ + G$ + H$
+ 113 X$(X) = X$
+ 125 X = 0
+ 130  NEXT H: NEXT G: NEXT F: NEXT E: NEXT D: NEXT C: NEXT B: NEXT A
+ 140  HOME 
+ 150  FOR I = 0 TO 51
+ 158 X = I
+ 159  FOR J = 1 TO 5
+ 160  PRINT X$(X)"    ";X;"   ";:X = X + 51
+ 161  NEXT J
+ 162  PRINT 
+ 163  NEXT I

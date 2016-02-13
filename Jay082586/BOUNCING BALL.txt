@@ -1,0 +1,39 @@
+ 10  REM  *** BOUNCING BALL
+ 20  REM  *** JAY GRAVES
+ 21  REM  ***      &
+ 22  REM  *** JAMES STONE
+ 30  REM  *** 12-3-86
+ 40  HOME : GR 
+ 41 H = 1
+ 42 X =  - 1
+ 43 B = 0
+ 50  VTAB 22: INPUT "PERCENT OF BOUNCE: ";P
+ 51 P = P / 100
+ 60  REM  *** DROP BALL
+ 61  IF H > 37 THEN 230
+ 62 X = X + 1
+ 70  FOR Y = H TO 39
+ 80  COLOR= 2
+ 90  PLOT X,Y
+ 100  COLOR= 0
+ 110  PLOT X,Y - 1
+ 120  NEXT Y
+ 121 B = B + 1
+ 130  REM  *** RAISE BALL
+ 140 Z =  INT (P * (39 - H))
+ 150 H = 39 - Z
+ 160  FOR Y = 38 TO H STEP  - 1
+ 170  COLOR= 2
+ 180  PLOT X,Y
+ 190  COLOR= 0
+ 200  PLOT X,Y + 1
+ 210  NEXT Y
+ 220  GOTO 60
+ 230  VTAB 22: PRINT "                     "
+ 240  VTAB 22: PRINT "THE BALL BOUNCED ";B;" TIMES."
+ 241  VTAB 23: PRINT "'R' TO RUN / 'E' TO END"
+ 242  GET Q$
+ 243  IF Q$ = "R" THEN 10
+ 244  IF Q$ = "E" THEN 250
+ 245  GOTO 242
+ 250  TEXT : HOME : END 

@@ -1,0 +1,33 @@
+ 100  REM  *** INPUT SORT HI/LO
+ 110  REM  *** JAY GRAVES
+ 120  REM  *** 1/15/85
+ 130  HOME 
+ 140  VTAB (5): PRINT "This program will sort numbers that you"
+ 150  PRINT "input and list them in order from high"
+ 160  PRINT "to low."
+ 170  VTAB (22): PRINT "PRESS ANY KEY TO CONTINUE"
+ 180  GET A$: HOME 
+ 190  VTAB (5): INPUT "HOW MANY NUMBERS? ";N
+ 200  DIM A(N)
+ 205  PRINT : PRINT 
+ 210  FOR I = 1 TO N
+ 220  INPUT "NUMBER:  ";A(I)
+ 230  PRINT 
+ 240  NEXT I
+ 250  HOME 
+ 260  VTAB (7): PRINT "THE COMPUTER IS NOW SORTING THE NUMBERS"
+ 270  PRINT "PLEASE WAIT.
+ 275  FOR I = 1 TO 4000: NEXT I
+ 280  FOR Q = 1 TO N - 1
+ 290  FOR I = 1 TO N - 1
+ 300  IF A(I) >  = A(I + 1) THEN 340
+ 310 T = A(I)
+ 320 A(I) = A(I + 1)
+ 330 A(I + 1) = T
+ 340  NEXT I
+ 350  NEXT Q
+ 360  HOME 
+ 370  FOR I = 1 TO N
+ 380  PRINT A(I)
+ 390  NEXT I
+ 400  END 

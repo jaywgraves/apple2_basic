@@ -1,0 +1,30 @@
+ 50  HOME : HGR 
+ 60 H =  INT ( RND (1) * 7) + 1
+ 61  IF H = 4 THEN 60
+ 62  HCOLOR= H
+ 70 A = 1:A1 = 0
+ 80 B = 279:B1 = 0
+ 90 C = 279:C1 = 159
+ 100 D = 1:D1 = 159
+ 105  FOR I = 1 TO 27
+ 110  HPLOT A,A1 TO B,B1 TO C,C1 TO D,D1 TO A,A1
+ 120 A = A + 3:A1 = A1 + 3
+ 130 B = B - 3:B1 = B1 + 3
+ 140 C = C - 3:C1 = C1 - 3
+ 150 D = D + 3:D1 = D1 - 3
+ 160  NEXT I
+ 170 H =  INT ( RND (1) * 7) + 1
+ 171  IF H = 4 THEN 170
+ 172  HCOLOR= H
+ 180 A = 82:A1 = 81
+ 190 B = 198:B1 = 81
+ 200 C = 198:C1 = 78
+ 210 D = 82:D1 = 78
+ 220  FOR I = 27 TO 1 STEP  - 1
+ 230  HPLOT A,A1 TO B,B1 TO C,C1 TO D,D1 TO A,A1
+ 240 A = A - 3:A1 = A1 - 3
+ 250 B = B + 3:B1 = B1 - 3
+ 260 C = C + 3:C1 = C1 + 3
+ 270 D = D - 3:D1 = D1 + 3
+ 280  NEXT I
+ 290  GOTO 60

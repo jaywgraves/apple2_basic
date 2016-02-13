@@ -1,0 +1,12 @@
+ 10  REM  ********************
+ 20  REM  * SN@ILS IN SPACE! *    
+ 30  REM  * BY TIM BOEHME    *
+ 35  REM  ********************    
+ 40  TEXT : HOME :H = 20: PRINT  CHR$ (21): POKE 35,22
+ 50 K =  PEEK (49152): ON K < 128 GOTO 80:H = H + (K = 149) - (K = 136)
+ 80  POKE 49168,0: IF  RND (1) * 10 < 1 THEN  VTAB 20: HTAB  RND (1) * 20 + 10: PRINT "@": GOTO 120
+ 100  VTAB 22: HTAB  RND (1) * 39 + 1: PRINT  CHR$ (46)
+ 110  IF  PEEK (1535 + H) = 192 THEN S = S + 1: VTAB 5: HTAB H: PRINT "#"; CHR$ (7): VTAB 23: PRINT "MUNCHED:";S: GOTO 140
+ 120  VTAB 5: HTAB H: PRINT "V"
+ 140 T = T + 1: IF S < 10 THEN 50
+ 150  TEXT : VTAB 23: PRINT S;" SNAILS MUNCHED IN ";T;" TITAN SEC.": END 

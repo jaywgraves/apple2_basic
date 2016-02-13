@@ -1,0 +1,19 @@
+ 10  REM  *** SF SAVE Names
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 3/4/86
+ 40 D$ =  CHR$ (4): DIM N$(15)
+ 50  HOME 
+ 60  VTAB (5): PRINT "This program will save 15 names in a"
+ 70  PRINT "sequential file."
+ 80  VTAB (21): PRINT "PRESS ANY KEY TO CONTINUE"
+ 90  GET A$: HOME 
+ 100  FOR I = 1 TO 15
+ 110  INPUT "NAMES:  ";N$(I)
+ 120  NEXT I
+ 130  PRINT D$;"OPEN SFNAMES"
+ 140  PRINT D$;"WRITE SFNAMES"
+ 150  FOR I = 1 TO 15
+ 160  PRINT N$(I)
+ 170  NEXT I
+ 180  PRINT D$;"CLOSE SFNAMES"
+ 190  END 

@@ -1,0 +1,14 @@
+ 10  HOME 
+ 30  PRINT  CHR$ (4);"PR#4": PRINT  CHR$ (1)
+ 40  PRINT  CHR$ (4);"PR#0"
+ 50  PRINT  CHR$ (4);"IN#4"
+ 60  INPUT "";X,Y,S
+ 70 H =  INT (X * 39 / 1023 + 1):V =  INT (Y * 23 / 1023 + 1)
+ 75  HTAB (H): VTAB (V)
+ 76  VTAB (22): PRINT X,Y: PRINT H,V
+ 80  IF S > 0 THEN 60
+ 90  PRINT  CHR$ (4);"IN#0"
+ 100  PRINT  CHR$ (4);"PR#4": PRINT  CHR$ (0)
+ 110  PRINT  CHR$ (4);"PR#0"
+ 120  POKE  - 16368,0
+ 130  END 

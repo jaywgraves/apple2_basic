@@ -1,0 +1,54 @@
+ 10  REM  *** SF-SAVE NAMES*
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 9-10-86
+ 40  HOME 
+ 50  DIM F$(100),L$(100)
+ 60 D$ =  CHR$ (4)
+ 70  REM  *** F$ = FIRST NAME
+ 80  REM  *** L$ = LAST NAME
+ 90  VTAB 5: HTAB 5: PRINT "This program will file 20 names."
+ 100  VTAB 22: PRINT "Press any key to continue": GET A$
+ 110  HOME 
+ 120 I = 1
+ 130  PRINT : PRINT : INPUT "First name: ";F$(I)
+ 140  IF F$(I) = "LIST" THEN  GOSUB 200
+ 150  IF F$(I) = "END" THEN 430
+ 160  PRINT 
+ 170  INPUT "Last name: ";L$(I)
+ 180  GOSUB 310
+ 190 I = I + 1: GOTO 130
+ 200  GOSUB 220
+ 210  HOME : GOTO 190
+ 220  REM  *** LIST NAMES SO FAR
+ 230 A = I
+ 240 J = I - 1: HOME 
+ 250  FOR I = 1 TO J
+ 260  PRINT F$(I);" ";L$(I)
+ 270  NEXT I
+ 280 I = A - 1
+ 290  VTAB 22: PRINT "PRESS ANY KEY TO CONTINUE": GET A$: PRINT 
+ 300  RETURN 
+ 310  REM  *** CHECK NAMES 
+ 320 A = I
+ 330  IF I = 1 THEN 420
+ 340  FOR X = 1 TO I - 1
+ 350  IF F$(X) = F$(I) AND L$(X) = L$(I) THEN 370
+ 360  NEXT X: GOTO 420
+ 370  PRINT "   "
+ 380  HOME : PRINT "You have already used that name!"
+ 390  PRINT "Press any key to reenter name"
+ 400  GET A$
+ 410 I = A - 1: HOME 
+ 420  RETURN 
+ 430  REM  *** END & SAVE FILE
+ 431 P = I - 1
+ 432  HOME : VTAB (12): PRINT "SAVING THE FILE:  NAMES*"
+ 440  PRINT D$;"OPEN NAMES*"
+ 450  PRINT D$;"WRITE NAMES*"
+ 460  PRINT P
+ 470  FOR Z = 1 TO P
+ 480  PRINT F$(Z)
+ 490  PRINT L$(Z)
+ 500  NEXT Z
+ 510  PRINT D$;"CLOSE NAMES*"
+ 520  HOME : END 

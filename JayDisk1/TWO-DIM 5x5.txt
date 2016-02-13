@@ -1,0 +1,32 @@
+ 10  REM  *** TWO-DIM 5x5
+ 20  REM   *** TERESA CHANCE & JAY GRAVES
+ 30  REM  *** FEB. 7, 1986
+ 40  HOME 
+ 50  PRINT "This program will print our numbers in"
+ 60  PRINT "a table that adds them across and down"
+ 70  FOR I = 1 TO 2000: NEXT I
+ 80  DIM A(6,6)
+ 90  HOME 
+ 100  FOR I = 1 TO 5
+ 110  FOR J = 1 TO 5
+ 120  READ A(I,J)
+ 130 A(I,6) = A(I,6) + A(I,J)
+ 140 A(6,J) = A(6,J) + A(I,J)
+ 150  NEXT J
+ 160  NEXT I
+ 170  HOME 
+ 180 V = 3
+ 190  FOR I = 1 TO 6
+ 200 H = 1
+ 210  FOR J = 1 TO 6
+ 220  VTAB (V): HTAB (H): PRINT A(I,J)
+ 230 H = H + 4
+ 240  NEXT J
+ 250 V = V + 2
+ 260  NEXT I
+ 270  DATA  12,10,16,21,40
+ 280  DATA  11,15,90,41,86
+ 290  DATA  88,51,50,79,76
+ 300  DATA  36,30,24,98,19
+ 310  DATA  68,61,40,39,48
+ 320  END 

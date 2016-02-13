@@ -1,0 +1,20 @@
+ 10  REM  *** RA SAVE NAMES
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 3/14/86
+ 40 D$ =  CHR$ (4)
+ 45  DIM N$(15)
+ 50  HOME 
+ 60  VTAB (5): PRINT "This program will save 15 names in a"
+ 70  PRINT "random access file."
+ 80  VTAB (22): FLASH : PRINT "PRESS ANY KEY TO CONTINUE"
+ 90  GET A$: NORMAL : HOME 
+ 100  FOR I = 1 TO 15
+ 110  INPUT "NAME:  ";N$(I)
+ 120  NEXT I
+ 130  PRINT D$;"OPEN RANAMES,L15"
+ 140  FOR I = 1 TO 15
+ 150  PRINT D$;"WRITE RANAMES,R"I
+ 160  PRINT N$(I)
+ 170  NEXT I
+ 180  PRINT D$;"CLOSE RANAMES"
+ 190  END 

@@ -1,0 +1,55 @@
+0300-   A9 4C       LDA   #$4C
+0302-   8D F5 03    STA   $03F5
+0305-   A9 10       LDA   #$10
+0307-   8D F6 03    STA   $03F6
+030A-   A9 03       LDA   #$03
+030C-   8D F7 03    STA   $03F7
+030F-   60          RTS
+0310-   AD 00 BF    LDA   $BF00
+0313-   C9 4C       CMP   #$4C
+0315-   F0 17       BEQ   $032E
+0317-   AD 53 AA    LDA   $AA53
+031A-   8D 7D 03    STA   $037D
+031D-   AD 54 AA    LDA   $AA54
+0320-   8D 7E 03    STA   $037E
+0323-   A9 45       LDA   #$45
+0325-   85 36       STA   $36
+0327-   A9 03       LDA   #$03
+0329-   85 37       STA   $37
+032B-   4C EA 03    JMP   $03EA
+032E-   AD 30 BE    LDA   $BE30
+0331-   8D 7D 03    STA   $037D
+0334-   AD 31 BE    LDA   $BE31
+0337-   8D 7E 03    STA   $037E
+033A-   A9 45       LDA   #$45
+033C-   8D 30 BE    STA   $BE30
+033F-   A9 03       LDA   #$03
+0341-   8D 31 BE    STA   $BE31
+0344-   60          RTS
+0345-   C9 A2       CMP   #$A2
+0347-   D0 0A       BNE   $0353
+0349-   AD 7F 03    LDA   $037F
+034C-   49 FF       EOR   #$FF
+034E-   8D 7F 03    STA   $037F
+0351-   A9 A2       LDA   #$A2
+0353-   2C 7F 03    BIT   $037F
+0356-   30 21       BMI   $0379
+0358-   C9 BA       CMP   #$BA
+035A-   D0 14       BNE   $0370
+035C-   20 8E FD    JSR   $FD8E    F8ROM:CROUT
+035F-   A9 BA       LDA   #$BA
+0361-   20 7C 03    JSR   $037C
+0364-   A2 03       LDX   #$03
+0366-   A9 A0       LDA   #$A0
+0368-   20 7C 03    JSR   $037C
+036B-   CA          DEX
+036C-   D0 F8       BNE   $0366
+036E-   F0 09       BEQ   $0379
+0370-   C9 A0       CMP   #$A0
+0372-   D0 05       BNE   $0379
+0374-   CD 80 03    CMP   $0380
+0377-   F0 CB       BEQ   $0344
+0379-   8D 80 03    STA   $0380
+037C-   4C FF FF    JMP   $FFFF
+037F-   00          BRK
+0380-   00          BRK

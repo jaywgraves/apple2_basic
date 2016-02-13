@@ -1,0 +1,18 @@
+ 10  REM  *** RANDOM PLOT
+ 20  REM  *** JAY GRAVES
+ 30  REM  *** 4/1/86
+ 40  HOME 
+ 50  HGR 
+ 55  FOR I = 1 TO 100
+ 60 C =  INT ( RND (1) * 7) + 1
+ 70 X =  INT ( RND (1) * 159)
+ 80 Y =  INT ( RND (1) * 159)
+ 90  HCOLOR= C
+ 100  HPLOT X,Y TO Y,X
+ 105  HPLOT Y,X TO Y,Y
+ 106  HPLOT Y,Y TO X,X
+ 107  HPLOT X,X TO X,Y
+ 110  NEXT I
+ 120  VTAB (22): GET A$: PRINT 
+ 130  TEXT : HOME 
+ 140  END 

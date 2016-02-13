@@ -1,0 +1,29 @@
+ 100  REM  *** MESSAGE
+ 110  REM  *** JAY GRAVES
+ 120  REM  *** NOV. 13, 1985
+ 130  HOME 
+ 140  VTAB (10): INPUT "TYPE YOUR NAME:  ";N$
+ 150  VTAB (13): PRINT "OK ";N$;" is this your correct name?"
+ 160  VTAB (14): INPUT "ENTER (Y/N)";Q$
+ 170  IF Q$ = "N" THEN 130
+ 180  HOME 
+ 190  VTAB (10): PRINT "Hi ";N$;" I regret to in form you"
+ 200  VTAB (11): PRINT "that you have pressed a wrong key and"
+ 210  VTAB (12): PRINT "this computer will self-destruct after"
+ 220  VTAB (13): PRINT "the beeps end."
+ 225  SPEED= 50
+ 227  FOR I = 1 TO 10: PRINT "  ": NEXT I
+ 228  SPEED= 255
+ 250  HOME 
+ 255  FOR I = 1 TO 500: NEXT I
+ 260  VTAB (12): HTAB (9): PRINT "Just kidding"
+ 270  VTAB (15): HTAB (7): INVERSE : PRINT "PRESS ANY KEY TO CONTINUE": NORMAL 
+ 280  GET A$
+ 290  HOME 
+ 300  VTAB (10): PRINT "Do you want to try again, ";N$
+ 310  INPUT "ENTER (Y/N)  ";Q$
+ 320  IF Q$ = "Y" THEN 130
+ 330  HOME 
+ 340  VTAB (10): HTAB (6): PRINT "Thanks for running my program."
+ 350  VTAB (15): HTAB (16): PRINT "THE END"
+ 360  END 

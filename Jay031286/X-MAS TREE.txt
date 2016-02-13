@@ -1,0 +1,14 @@
+ 10  HOME : HGR : HCOLOR= 1
+ 20 X = 140
+ 30 Y = 10
+ 31 A = 12.5
+ 40  FOR I = 0 TO 50 STEP 2
+ 50  HPLOT X - I,Y TO X + I,Y
+ 51  HPLOT X - I,A TO X + I,A
+ 60 Y = Y + 5
+ 61 A = A + 5
+ 70  NEXT I
+ 80  HCOLOR= 5
+ 90  FOR I = 130 TO 150
+ 100  HPLOT I,138 TO I,159
+ 110  NEXT I

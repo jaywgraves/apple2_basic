@@ -1,0 +1,15 @@
+ 10  REM ...LIGHTNING
+ 20  REM ...JAMES STONE
+ 21  REM ...   AND
+ 22  REM ...JAY GRAVES
+ 30  REM ...DEC 3, 1986
+ 35  ONERR  GOTO 50
+ 40  HOME : HGR 
+ 50  HCOLOR=  INT ( RND (1) * 7)
+ 60 X =  INT ( RND (1) * 279)
+ 70 Y =  INT ( RND (1) * 159)
+ 80 C =  INT ( RND (1) * 5)
+ 85 X = X * C:Y = Y * C
+ 90  HPLOT X,Y TO X,Y + 16
+ 100  HPLOT  TO X + 7,Y + 14 TO X,Y + 36 TO X + 7,Y + 34 TO X,Y + 52 TO X + 21,Y + 24 TO X + 14,Y + 26 TO X + 21,Y + 4 TO X + 14,Y + 12 TO X + 14,Y
+ 120  GOTO 50

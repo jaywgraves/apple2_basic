@@ -1,0 +1,12 @@
+ 10  HOME : HGR2 
+ 15  FOR I = 1 TO 10
+ 20 C =  INT ( RND (1) * 7)
+ 21  IF C = 0 THEN 20
+ 22  IF C = 4 THEN 20
+ 23  IF C = D THEN 20
+ 24  HCOLOR= C
+ 30  HPLOT 0,0
+ 40  CALL  - 3082
+ 47 D = C
+ 50  NEXT I
+ 60  END 

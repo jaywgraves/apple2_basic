@@ -1,0 +1,10 @@
+ 1  TEXT : HOME 
+ 2  INPUT "";X$
+ 3 C = 0
+ 10  GR 
+ 15  VTAB 1
+ 20  PRINT X$
+ 21 C = C + 1: IF C = 20 THEN 40
+ 30  GOTO 20
+ 40  GET A$
+ 45  GOTO 1
